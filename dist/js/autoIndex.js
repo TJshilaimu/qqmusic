@@ -1,0 +1,1 @@
+"use strict";!function(t){function n(t){this.now=0,this.total=t}n.prototype={prev:function(){return this.getIndex(-1)},next:function(){return this.getIndex(1)},getIndex:function(t){return this.now=(this.now+t+this.total)%this.total,this.now}},t.autoIndex=n}(window.player);

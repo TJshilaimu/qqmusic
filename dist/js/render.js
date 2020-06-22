@@ -1,0 +1,1 @@
+"use strict";!function(o){o.render=function(e){var n,r,i,l;n=e.image,o.blurImg(n),document.querySelector(".imgInfo img").src=n,r=e,(i=document.querySelector(".singerInfo").children)[0].innerHTML=r.name,i[1].innerHTML=r.album,i[2].innerHTML=r.singer,l=e.isLike,document.querySelectorAll(".control li")[0].className=l?"liking":""}}(window.player||(window.player={}));

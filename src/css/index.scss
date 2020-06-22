@@ -1,0 +1,248 @@
+body,
+h2,
+dl,
+dd {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    background-size: cover;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+
+
+    .wrap {
+        box-sizing: border-box;
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        padding-top: 10vw;
+
+        .imgInfo {
+            width: 70vw;
+            height: 70vw;
+            border-radius: 50%;
+            margin: 0 auto;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 80%;
+                height: 80%;
+                border-radius: 50%;
+            }
+
+        }
+
+        .singerInfo {
+            width: 100vw;
+            height: 30vw;
+            text-align: center;
+            color: #eee;
+
+            h2 {
+                font-weight: 600;
+                margin-bottom: 2vw;
+                // color:#fff;
+            }
+
+            div {
+                margin-bottom: 1vw;
+            }
+        }
+
+        .process {
+            width: 100vw;
+            // border:1px solid red;
+            height: 8vh;
+            display: flex;
+            align-items: center;
+            color: #eee;
+
+            .currentTime,
+            .totalTime {
+                padding: 0 3vw;
+            }
+
+            .press {
+                line-height: 8vh;
+                flex: 1 1 auto;
+                position: relative;
+
+                .backBg,
+                .frontBg {
+                    position: absolute;
+                    top: 50%;
+                    left:0;
+                    margin-top: -.3vw;
+                    width: 0;
+                    height: .6vw;
+                    background-color: rgba(184, 177, 177, 0.7)
+                }
+
+                .dot {
+                    position: absolute;
+                    left: -2vw;
+                    top: 50%;
+                    margin-top: -2vw;
+                    width: 2vw;
+                    height: 2vw;
+                    border: 1vw solid rgba(0, 255, 255, 0);
+                    z-index: 2;
+                    border-radius: 50%;
+                    background-color: #fff;
+                    background-clip: padding-box;
+
+                }
+
+                .backBg{
+                    width: 100%;
+                }
+                .frontBg{
+                    z-index:5;
+                    background-color: #fff;
+                    
+                }
+            }
+        }
+
+        // 控制列表
+        .control {
+            // width: 100vw;
+            // height: 18vw;
+            // position: fixed;
+            // bottom: 0;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            // display: flex;
+            // justify-content: space-around;
+            // align-items: center;
+            // background-color: slategrey;
+            width: 100vw;
+            height: 16vw;
+            display: flex;
+            position: fixed;
+            bottom: 0;
+            background: rgba(0, 0, 0, .5);
+
+            li {
+                // text-align: center;
+                width: 20%;
+                // background: url('../images/icon-prev.png')  no-repeat center/30%;
+                // background-color: skyblue;
+
+
+                &:nth-child(1) {
+                    background: url('../images/icon-like.png') no-repeat center/30%;
+
+                    &.liking {
+                        background: url('../images/icon-like-solid.png') no-repeat center/30%;
+                    }
+                }
+
+                // &:nth-child(2) {
+                //     background: url('../images/icon-prev.png');
+
+                // }
+
+                &:nth-child(2) {
+                    background: url(../images/icon-prev.png) no-repeat center/30%;
+                }
+
+                &:nth-child(3) {
+                    background: url(../images/icon-play.png) no-repeat center/30%;
+
+                    &.play {
+                        background: url(../images/icon-pause.png) no-repeat center/30%;
+                    }
+                }
+
+                &:nth-child(4) {
+                    background: url(../images/icon-next.png) no-repeat center/30%;
+                }
+
+                &:nth-child(5) {
+                    background: url(../images/icon-list.png) no-repeat center/30%;
+                }
+            }
+
+        }
+
+        .playList {
+            //     position: fixed;
+            //     color:#fff;
+            //     z-index:3;
+            //     bottom: 0;
+
+            //     width:100vw;
+            //     background:linear-gradient(rgba(0,0,0,1),rgba(122,122,122,.5));
+            //     dt,dd,.close{
+            //         height:13vw;
+            //         border-bottom: .5vw solid gray;
+            //     }
+            //     dl{
+            //         dt{
+            //             text-align:center;
+            //         }
+            //         dd{
+            //             margin-left:2vw;
+            //             margin-bottom:2vw;
+            //         }
+            //     }
+            //     div{
+
+            //         text-align: center;
+            //     }
+
+
+            width: 100vw;
+            position: fixed;
+            bottom: 0;
+            background: linear-gradient(rgb(5, 5, 5), rgba(170, 170, 170, .95));
+            z-index: 4;
+            transform: translateY(180vw);
+            transition: .5s;
+
+            dt,
+            dd,
+            .close {
+                height: 12vw;
+                line-height: 12vw;
+                font-size: 16px;
+                color: #fff;
+                border-bottom: 1px solid rgba(255, 255, 255, .1);
+            }
+
+            dt,
+            .close {
+                text-align: center;
+            }
+
+            dd {
+                margin-left: 0;
+                padding-left: 13vw;
+
+                &.active {
+                    color: #56b287;
+                }
+            }
+
+            .close {
+                border-bottom: none;
+            }
+        }
+    }
+}
